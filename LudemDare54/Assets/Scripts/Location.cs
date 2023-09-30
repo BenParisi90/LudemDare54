@@ -26,5 +26,11 @@ public class Location : MonoBehaviour
     {
         //set the current location to this location
         currentLocation = this;
+
+    }
+
+    void Update()
+    {
+
     }
 }
