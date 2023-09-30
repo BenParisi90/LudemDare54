@@ -16,7 +16,9 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            character.Move();
+            Vector3 targetDestination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            targetDestination.z = transform.position.z;
+            character.Move(targetDestination);
         }
     }
 }

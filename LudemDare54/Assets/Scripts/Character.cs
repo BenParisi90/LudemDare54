@@ -4,18 +4,29 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    public void Move()
+    Vector3 destination;
+    Walkable destinationWalkable;
+
+    void Start()
     {
-        
-        //get the destination from the mouse click
-        Vector3 destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        destination.z = transform.position.z;
+        Move(transform.position);
+    }
+
+    void Update()
+    {
+        //move the character towards the destination
+        destinationWalkable.PlaceCharacter(this, Vector3.MoveTowards(transform.position, destination, 5f * Time.deltaTime));
+    }
+
+    public void Move(Vector3 targetDestination)
+    {
 
         //check if the destination is valid
-        Walkable walkable = Location.currentLocation.IsValidWalkDestination(destination);
+        Walkable walkable = Location.currentLocation.IsValidWalkDestination(targetDestination);
         if (walkable != null)
         {
-            walkable.PlaceCharacter(this, destination);
+            destinationWalkable = walkable;
+            destination = targetDestination;
         }
     }
 }
