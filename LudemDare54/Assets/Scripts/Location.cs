@@ -9,6 +9,7 @@ public class Location : MonoBehaviour
     //list of walkable areas within the location
     public Walkable walkable;
     public bool isStartLocation = false;
+    LocationDoor[] doors;
 
     public bool IsValidWalkDestination(Vector3 destination)
     {
@@ -19,6 +20,11 @@ public class Location : MonoBehaviour
     {
         walkable = GetComponentInChildren<Walkable>();
         gameObject.SetActive(isStartLocation);
+        doors = GetComponentsInChildren<LocationDoor>();
+        if(isStartLocation)
+        {
+            gameObject.SetActive(true);
+        }
     }
 
     void Start()
@@ -42,5 +48,17 @@ public class Location : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public Vector3 GetDoorLocation(int doorDestionationIndex)
+    {
+        foreach (LocationDoor door in doors)
+        {
+            if (door.DestinationLocationIndex == doorDestionationIndex)
+            {
+                return door.transform.position;
+            }
+        }
+        return Vector3.zero;
     }
 }

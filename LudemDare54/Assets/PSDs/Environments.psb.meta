@@ -104,7 +104,7 @@ ScriptedImporter:
       y: 1092
       width: 1915
       height: 1080
-    spriteID: 76e1ca3399ef2e847ab4e2c7e6c0473e
+    spriteID: 23e7eac3c41a51741bc8a35ce6a83b19
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -171,8 +171,8 @@ ScriptedImporter:
     spriteName: EntranceHall
     isGroup: 0
     parentIndex: -1
-    spriteID: 76e1ca3399ef2e847ab4e2c7e6c0473e
-    layerID: 11
+    spriteID: 23e7eac3c41a51741bc8a35ce6a83b19
+    layerID: 12
     mosaicPosition: {x: 4, y: 1092}
     flatten: 0
     isImported: 1

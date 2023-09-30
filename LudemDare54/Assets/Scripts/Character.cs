@@ -9,7 +9,7 @@ public class Character : MonoBehaviour
 
     void Start()
     {
-        destination = transform.position;
+        ResetDestination();
     }
     void Update()
     {
@@ -24,5 +24,10 @@ public class Character : MonoBehaviour
         {
             destination = targetDestination;
         }
+    }
+
+    public void ResetDestination()
+    {
+        destination = transform.position;
     }
 }
