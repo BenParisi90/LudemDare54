@@ -297,6 +297,7 @@ GameObject:
   - component: {fileID: 126586782}
   - component: {fileID: 126586784}
   - component: {fileID: 126586785}
+  - component: {fileID: 126586786}
   m_Layer: 0
   m_Name: Walkable
   m_TagString: Untagged
@@ -365,7 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 928821b75869b4f4198148968d1860f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topScale: 0.5
+  topScale: 0.7
   bottomScale: 1
 --- !u!114 &126586785
 MonoBehaviour:
@@ -379,6 +380,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51b0df45afb05b4085b10fb72e7105d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &126586786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126586781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dcbde003370b004088965cd3f2e9f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorType: 0
 --- !u!1 &150662573
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +807,7 @@ GameObject:
   - component: {fileID: 1220661311}
   - component: {fileID: 1220661312}
   - component: {fileID: 1220661313}
+  - component: {fileID: 1220661314}
   m_Layer: 0
   m_Name: Computer
   m_TagString: Untagged
@@ -888,6 +903,19 @@ MonoBehaviour:
     lines:
     - text: I sure do love Ludem Dare!
       speaker: 
+--- !u!114 &1220661314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220661308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dcbde003370b004088965cd3f2e9f12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorType: 1
 --- !u!1 &1221883800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,3 +1374,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkable: {fileID: 0}
+--- !u!1 &2141586614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2141586615}
+  - component: {fileID: 2141586616}
+  m_Layer: 0
+  m_Name: CursorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2141586615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141586614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2141586616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141586614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9bc830c8f36c6428fead9d1887e8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorTextures:
+  - {fileID: 2800000, guid: 2677dd8d6b2df374d836a6ea00a9d260, type: 3}
+  - {fileID: 2800000, guid: 7d84e6e5dde5d004582534e56290cdd9, type: 3}
+  - {fileID: 2800000, guid: 6aa3944649e64194dbeb17ecb789b3cc, type: 3}
+  hotSpot: {x: 0, y: 0}
