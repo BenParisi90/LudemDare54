@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    Character character;
+    public static PlayerController instance;
+    public Character character;
 
     void Start()
     {
+        instance = this;
         character = GetComponent<Character>();
     }
 

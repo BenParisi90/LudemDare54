@@ -6,53 +6,15 @@ using UnityEngine.U2D;
 public class Walkable : MonoBehaviour
 {
     PolygonCollider2D walkableArea;
-    SpriteShapeController spriteShapeController;
-    SpriteShapeRenderer spriteShapeRenderer;
 
     public float topScale = 1f;
     public float bottomScale = 1f;
 
     void Start()
     {
-        spriteShapeController = GetComponentInChildren<SpriteShapeController>();
-        spriteShapeRenderer = GetComponentInChildren<SpriteShapeRenderer>();
         //get the PolygonCollider2D component
         walkableArea = GetComponent<PolygonCollider2D>();
 
-        // Get the Spline component
-        Spline spline = spriteShapeController.spline;
-        //set the points of hte spline to match the walkable area
-        Vector2[] points = walkableArea.points;
-        //set the number of points in the spline to match the number of points in the walkable area
-        Debug.Log(spline.GetPointCount());
-        for (int i = 0; i < points.Length; i++)
-        {
-            Debug.Log(i);
-            if(i >= spline.GetPointCount())
-            {
-                spline.InsertPointAt(i, points[i]);
-            }
-            else
-            {
-                spline.SetPosition(i, points[i]);
-            }
-            spline.SetTangentMode(i, ShapeTangentMode.Linear);
-            spline.SetHeight(i, 0f);
-        }
-
-    }
-
-    void Update()
-    {
-        //if I'm holding dowwn the q button, enable the walkable area, otherwise disable it
-        if (Input.GetKey(KeyCode.Q))
-        {
-            spriteShapeRenderer.enabled = true;
-        }
-        else
-        {
-            spriteShapeRenderer.enabled = false;
-        }
     }
 
     public bool IsWithinWalkableArea(Vector3 destination)
@@ -62,6 +24,18 @@ public class Walkable : MonoBehaviour
 
         //check if the destination is within the walkable area
         return walkableArea.OverlapPoint(destination2D);
+    }
+
+    public Vector3 ClosestPoint(Vector3 destination)
+    {
+        //convert the destination to a Vector2
+        Vector2 destination2D = new Vector2(destination.x, destination.y);
+
+        //get the closest point on the walkable area to the destination
+        Vector2 closestPoint = walkableArea.ClosestPoint(destination2D);
+
+        //return the closest point as a Vector3
+        return new Vector3(closestPoint.x, closestPoint.y, destination.z);
     }
 
     public void PlaceCharacter(Character character, Vector3 destionation)

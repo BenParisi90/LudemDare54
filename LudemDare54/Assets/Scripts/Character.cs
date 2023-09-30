@@ -5,7 +5,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     Vector3 destination;
-    Walkable destinationWalkable;
+
 
     void Start()
     {
@@ -15,17 +15,13 @@ public class Character : MonoBehaviour
     void Update()
     {
         //move the character towards the destination
-        destinationWalkable.PlaceCharacter(this, Vector3.MoveTowards(transform.position, destination, 5f * Time.deltaTime));
+        Location.currentLocation.walkable.PlaceCharacter(this, Vector3.MoveTowards(transform.position, destination, 5f * Time.deltaTime));
     }
 
-    public void Move(Vector3 targetDestination)
+    public void Move(Vector3 targetDestination, bool force = false)
     {
-
-        //check if the destination is valid
-        Walkable walkable = Location.currentLocation.IsValidWalkDestination(targetDestination);
-        if (walkable != null)
+        if (force || Location.currentLocation.IsValidWalkDestination(targetDestination))
         {
-            destinationWalkable = walkable;
             destination = targetDestination;
         }
     }
