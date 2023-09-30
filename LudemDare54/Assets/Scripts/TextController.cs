@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class TextController : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class TextController : MonoBehaviour
     int currentLine = 0;
     bool showingConversation = false;
     public bool ShowingConversation => showingConversation;
+    bool revealingText = false;
+    float charRevealTime = 0.05f;
+    float defaultCharRevealTime = 0.05f;
 
     [SerializeField]
     TextMeshProUGUI textMesh;
@@ -25,12 +29,26 @@ public class TextController : MonoBehaviour
     {
         instance = this;
         textMesh.text = "";
+        textBackground.enabled = false;
     }
 
     void SetText(string text)
     {
         Debug.Log("Setting text to " + text);
-        textMesh.text = text;
+        StartCoroutine(RevealText(text));
+    }
+
+    IEnumerator RevealText(string text)
+    {
+        revealingText = true;
+        textMesh.text = "";
+        charRevealTime = defaultCharRevealTime;
+        for (int i = 0; i < text.Length; i++)
+        {
+            textMesh.text += text[i];
+            yield return new WaitForSeconds(charRevealTime); // adjust the delay between characters here
+        }
+        revealingText = false;
     }
 
     public void SetConversation(Conversation conversation)
@@ -45,19 +63,29 @@ public class TextController : MonoBehaviour
 
     void Update()
     {
-        if (showingConversation && Input.GetMouseButtonDown(0) && !conversationSetThisFrame)
+        if (showingConversation)
         {
-            Debug.Log("Advancing conversation");
-            currentLine++;
-            if (currentLine < currentConversation.lines.Length)
+            if(Input.GetMouseButtonDown(0) && !conversationSetThisFrame)
             {
-                SetText(currentConversation.lines[currentLine].text);
-            }
-            else
-            {
-                showingConversation = false;
-                SetText("");
-                textBackground.enabled = false;
+                if(revealingText)
+                {
+                    charRevealTime = 0f;
+                }
+                else
+                {
+                    Debug.Log("Advancing conversation");
+                    currentLine++;
+                    if (currentLine < currentConversation.lines.Length)
+                    {
+                        SetText(currentConversation.lines[currentLine].text);
+                    }
+                    else
+                    {
+                        showingConversation = false;
+                        SetText("");
+                        textBackground.enabled = false;
+                    }
+                }
             }
         }
         if(conversationSetThisFrame)
