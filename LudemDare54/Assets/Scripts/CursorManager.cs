@@ -33,5 +33,6 @@ public enum CursorType
     WALK,
     INTERACT,
     EXIT,
+    LOOK,
     DEFAULT,
 }

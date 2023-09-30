@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     //when I click the mouse, move the character to that location
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !TextController.instance.ShowingConversation)
         {
             Vector3 targetDestination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             targetDestination.z = transform.position.z;

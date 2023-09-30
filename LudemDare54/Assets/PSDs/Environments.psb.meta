@@ -104,7 +104,7 @@ ScriptedImporter:
       y: 4
       width: 1920
       height: 1080
-    spriteID: fbc0497c11ca04f44b063f253dfcb5e2
+    spriteID: 6beb196dc020ec3409e4eca83ccc5d5c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -149,8 +149,8 @@ ScriptedImporter:
     spriteName: Bedroom
     isGroup: 0
     parentIndex: -1
-    spriteID: fbc0497c11ca04f44b063f253dfcb5e2
-    layerID: 6
+    spriteID: 6beb196dc020ec3409e4eca83ccc5d5c
+    layerID: 10
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1

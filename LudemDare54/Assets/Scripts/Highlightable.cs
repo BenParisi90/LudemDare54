@@ -6,35 +6,34 @@ using UnityEngine.U2D;
 public class Highlightable : MonoBehaviour
 {
     PolygonCollider2D polygonCollider2D;
-    SpriteShapeController spriteShapeController;
-    SpriteShapeRenderer spriteShapeRenderer;
+    public PolygonCollider2D PolygonCollider2D => polygonCollider2D;
+    public SpriteShapeRenderer spriteShapeRenderer;
+
+    [SerializeField]
+    CursorType cursorType;
+    public CursorType CursorType => cursorType;
+
+    void Awake()
+    {
+        polygonCollider2D = GetComponent<PolygonCollider2D>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        spriteShapeController = GetComponentInChildren<SpriteShapeController>();
-        spriteShapeRenderer = GetComponentInChildren<SpriteShapeRenderer>();
-        polygonCollider2D = GetComponent<PolygonCollider2D>();
-        // Get the Spline component
-        Spline spline = spriteShapeController.spline;
-        //set the points of hte spline to match the walkable area
-        Vector2[] points = polygonCollider2D.points;
-        //set the number of points in the spline to match the number of points in the walkable area
-        Debug.Log(spline.GetPointCount());
-        for (int i = 0; i < points.Length; i++)
-        {
-            Debug.Log(i);
-            if(i >= spline.GetPointCount())
-            {
-                spline.InsertPointAt(i, points[i]);
-            }
-            else
-            {
-                spline.SetPosition(i, points[i]);
-            }
-            spline.SetTangentMode(i, ShapeTangentMode.Linear);
-            spline.SetHeight(i, 0f);
-        }
+        SpriteShapeManager.instance.AssignSpriteShape(this);
+    }
+
+    //if the mouse is over the walkable area, show the boot cursor
+    void OnMouseEnter()
+    {
+        Debug.Log("Setting cursor to " + cursorType);
+        CursorManager.instance.SetCursor(cursorType);
+    }
+
+    void OnMouseExit()
+    {
+        CursorManager.instance.SetCursor(CursorType.DEFAULT);
     }
 
     void Update()
