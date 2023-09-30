@@ -12,10 +12,10 @@ public class Character : MonoBehaviour
         destination.z = transform.position.z;
 
         //check if the destination is valid
-        if (Location.currentLocation.IsValidWalkDestination(destination))
+        Walkable walkable = Location.currentLocation.IsValidWalkDestination(destination);
+        if (walkable != null)
         {
-            //move the character to the destination
-            transform.position = destination;
+            walkable.PlaceCharacter(this, destination);
         }
     }
 }

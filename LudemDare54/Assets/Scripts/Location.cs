@@ -9,17 +9,17 @@ public class Location : MonoBehaviour
     //list of walkable areas within the location
     public List<Walkable> walkableAreas = new List<Walkable>();
 
-    public bool IsValidWalkDestination(Vector3 destination)
+    public Walkable IsValidWalkDestination(Vector3 destination)
     {
         //check if the destination is within any of the walkable areas
         foreach (Walkable walkable in walkableAreas)
         {
             if (walkable.IsWithinWalkableArea(destination))
             {
-                return true;
+                return walkable;
             }
         }
-        return false;
+        return null;
     }
 
     public void Start()

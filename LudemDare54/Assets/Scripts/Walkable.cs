@@ -6,6 +6,9 @@ public class Walkable : MonoBehaviour
 {
     PolygonCollider2D walkableArea;
 
+    public float topScale = 1f;
+    public float bottomScale = 1f;
+
     void Start()
     {
         //get the PolygonCollider2D component
@@ -19,5 +22,15 @@ public class Walkable : MonoBehaviour
 
         //check if the destination is within the walkable area
         return walkableArea.OverlapPoint(destination2D);
+    }
+
+    public void PlaceCharacter(Character character, Vector3 destionation)
+    {
+        //place the character at the destination
+        character.transform.position = destionation;
+        //percent distance between the top and bottom of the walkable area
+        float percent = (destionation.y - walkableArea.bounds.min.y) / (walkableArea.bounds.max.y - walkableArea.bounds.min.y);
+        //scale the character based on the percent
+        character.transform.localScale = Vector3.Lerp(Vector3.one * bottomScale, Vector3.one * topScale, percent);
     }
 }
