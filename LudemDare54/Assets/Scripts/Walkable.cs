@@ -7,6 +7,7 @@ public class Walkable : MonoBehaviour
 {
     PolygonCollider2D walkableArea;
     SpriteShapeController spriteShapeController;
+    SpriteShapeRenderer spriteShapeRenderer;
 
     public float topScale = 1f;
     public float bottomScale = 1f;
@@ -14,6 +15,7 @@ public class Walkable : MonoBehaviour
     void Start()
     {
         spriteShapeController = GetComponentInChildren<SpriteShapeController>();
+        spriteShapeRenderer = GetComponentInChildren<SpriteShapeRenderer>();
         //get the PolygonCollider2D component
         walkableArea = GetComponent<PolygonCollider2D>();
 
@@ -38,6 +40,19 @@ public class Walkable : MonoBehaviour
             spline.SetHeight(i, 0f);
         }
 
+    }
+
+    void Update()
+    {
+        //if I'm holding dowwn the q button, enable the walkable area, otherwise disable it
+        if (Input.GetKey(KeyCode.Q))
+        {
+            spriteShapeRenderer.enabled = true;
+        }
+        else
+        {
+            spriteShapeRenderer.enabled = false;
+        }
     }
 
     public bool IsWithinWalkableArea(Vector3 destination)
