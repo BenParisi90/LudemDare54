@@ -15,12 +15,12 @@ public class Character : MonoBehaviour
     {
         float scaledSpeed = speed * transform.localScale.x  * Time.deltaTime;
         //move the character towards the destination
-        Location.currentLocation.walkable.PlaceCharacter(this, Vector3.MoveTowards(transform.position, destination, scaledSpeed));
+        LocationManager.instance.CurrentLocation.walkable.PlaceCharacter(this, Vector3.MoveTowards(transform.position, destination, scaledSpeed));
     }
 
     public void Move(Vector3 targetDestination, bool force = false)
     {
-        if (force || Location.currentLocation.IsValidWalkDestination(targetDestination))
+        if (force || LocationManager.instance.CurrentLocation.IsValidWalkDestination(targetDestination))
         {
             destination = targetDestination;
         }

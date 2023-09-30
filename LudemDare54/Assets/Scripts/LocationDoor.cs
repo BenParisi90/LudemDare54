@@ -7,8 +7,9 @@ public class LocationDoor : MonoBehaviour
     Interactable interactable;
 
     [SerializeField]
-    int destinationLocationIndex;
-    public int DestinationLocationIndex => destinationLocationIndex;
+    Location destinationLocation;
+    public Location DestinationLocation => destinationLocation;
+
 
     void Awake()
     {
@@ -20,12 +21,7 @@ public class LocationDoor : MonoBehaviour
     {
         if (TextController.instance.ShowingConversation == false)
         {
-            Debug.Log("Interacting with " + gameObject.name);
-            int indexOfExitedRoom = Location.currentLocation.transform.GetSiblingIndex();
-            Location.currentLocation.gameObject.SetActive(false);
-            Location.currentLocation.transform.parent.GetChild(destinationLocationIndex).gameObject.SetActive(true);
-            PlayerController.instance.Character.transform.position = Location.currentLocation.GetDoorLocation(indexOfExitedRoom);
-            PlayerController.instance.Character.ResetDestination();
+            LocationManager.instance.ChangeLocation(LocationManager.instance.CurrentLocation, destinationLocation);
         }
     }
 }

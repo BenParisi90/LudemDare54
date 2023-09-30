@@ -15,7 +15,7 @@ public class Interactable : MonoBehaviour
         if (Vector3.Distance(transform.position, PlayerController.instance.Character.transform.position) > interactDistance)
         {
             Vector3 targetDestination = transform.position;
-            Vector3 closestPoint = Location.currentLocation.walkable.ClosestPoint(targetDestination);
+            Vector3 closestPoint = LocationManager.instance.CurrentLocation.walkable.ClosestPoint(targetDestination);
             PlayerController.instance.Character.Move(closestPoint, true);
         }
         else

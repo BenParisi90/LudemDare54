@@ -27,7 +27,7 @@ public class Highlightable : MonoBehaviour
     //if the mouse is over the walkable area, show the boot cursor
     void OnMouseEnter()
     {
-        Debug.Log("Setting cursor to " + cursorType);
+        //Debug.Log("Setting cursor to " + cursorType);
         CursorManager.instance.SetCursor(cursorType);
     }
 

@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
             Vector3 targetDestination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             targetDestination.z = transform.position.z;
             character.Move(targetDestination);
+            Debug.Log("Set movement destination");
         }
     }
 }

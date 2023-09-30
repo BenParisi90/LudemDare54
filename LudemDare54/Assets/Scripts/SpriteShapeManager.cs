@@ -32,10 +32,8 @@ public class SpriteShapeManager : MonoBehaviour
         //set the points of hte spline to match the walkable area
         Vector2[] points = polygonCollider2D.points;
         //set the number of points in the spline to match the number of points in the walkable area
-        Debug.Log(spline.GetPointCount());
         for (int i = 0; i < points.Length; i++)
         {
-            Debug.Log(i);
             if(i >= spline.GetPointCount())
             {
                 spline.InsertPointAt(i, points[i]);

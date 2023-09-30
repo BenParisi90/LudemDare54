@@ -42,8 +42,6 @@ public class Walkable : MonoBehaviour
     {
         //place the character at the destination
         character.transform.position = destionation;
-        Debug.Log("destionation = " + destionation);
-        Debug.Log("walkableArea = " + walkableArea);
         //percent distance between the top and bottom of the walkable area
         float percent = (destionation.y - walkableArea.bounds.min.y) / (walkableArea.bounds.max.y - walkableArea.bounds.min.y);
         //scale the character based on the percent
