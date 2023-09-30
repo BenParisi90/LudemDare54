@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     Character character;
     public Character Character => character;
 
-    void Start()
+    void Awake()
     {
         instance = this;
         character = GetComponent<Character>();

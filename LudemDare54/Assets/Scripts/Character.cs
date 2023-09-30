@@ -7,12 +7,10 @@ public class Character : MonoBehaviour
     Vector3 destination;
     float speed = 5f;
 
-
     void Start()
     {
-        Move(transform.position);
+        destination = transform.position;
     }
-
     void Update()
     {
         float scaledSpeed = speed * transform.localScale.x  * Time.deltaTime;

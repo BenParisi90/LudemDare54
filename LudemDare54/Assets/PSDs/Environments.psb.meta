@@ -93,6 +93,28 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
+  - name: EntranceHall
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1092
+      width: 1915
+      height: 1080
+    spriteID: 76e1ca3399ef2e847ab4e2c7e6c0473e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 1092}
+    spritePosition: {x: 5, y: 0}
   - name: Bedroom
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -145,6 +167,16 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: EntranceHall
+    spriteName: EntranceHall
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 76e1ca3399ef2e847ab4e2c7e6c0473e
+    layerID: 11
+    mosaicPosition: {x: 4, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Bedroom
     spriteName: Bedroom
     isGroup: 0

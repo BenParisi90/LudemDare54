@@ -10,7 +10,7 @@ public class Walkable : MonoBehaviour
     public float topScale = 1f;
     public float bottomScale = 1f;
 
-    void Start()
+    void Awake()
     {
         //get the PolygonCollider2D component
         walkableArea = GetComponent<PolygonCollider2D>();
@@ -42,6 +42,8 @@ public class Walkable : MonoBehaviour
     {
         //place the character at the destination
         character.transform.position = destionation;
+        Debug.Log("destionation = " + destionation);
+        Debug.Log("walkableArea = " + walkableArea);
         //percent distance between the top and bottom of the walkable area
         float percent = (destionation.y - walkableArea.bounds.min.y) / (walkableArea.bounds.max.y - walkableArea.bounds.min.y);
         //scale the character based on the percent
