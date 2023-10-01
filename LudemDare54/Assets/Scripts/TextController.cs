@@ -17,10 +17,16 @@ public class TextController : MonoBehaviour
     float charRevealTime = 0.05f;
     float defaultCharRevealTime = 0.05f;
 
+
+
     [SerializeField]
     TextMeshProUGUI textMesh;
     [SerializeField]
     Image textBackground;
+    [SerializeField]
+    Image speakerImage;
+    [SerializeField]
+    Sprite[] speakers;
 
     //when you click the mouse, advance the conversation
     bool conversationSetThisFrame = false;
@@ -29,7 +35,7 @@ public class TextController : MonoBehaviour
     {
         instance = this;
         textMesh.text = "";
-        textBackground.enabled = false;
+        textBackground.gameObject.SetActive(false);
     }
 
     void SetText(string text)
@@ -55,10 +61,10 @@ public class TextController : MonoBehaviour
     {
         currentConversation = conversation;
         currentLine = 0;
-        SetText(currentConversation.lines[currentLine].text);
+        ShowLine(currentConversation.lines[currentLine]);
         showingConversation = true;
         conversationSetThisFrame = true;
-        textBackground.enabled = true;
+        textBackground.gameObject.SetActive(true);
     }
 
     void Update()
@@ -77,13 +83,13 @@ public class TextController : MonoBehaviour
                     currentLine++;
                     if (currentLine < currentConversation.lines.Length)
                     {
-                        SetText(currentConversation.lines[currentLine].text);
+                        ShowLine(currentConversation.lines[currentLine]);
                     }
                     else
                     {
                         showingConversation = false;
                         SetText("");
-                        textBackground.enabled = false;
+                        textBackground.gameObject.SetActive(false);
                     }
                 }
             }
@@ -93,17 +99,10 @@ public class TextController : MonoBehaviour
             conversationSetThisFrame = false;
         }
     }
-}
 
-[System.Serializable]
-public struct Conversation
-{
-    public DialogueLine[] lines;
-}
-
-[System.Serializable]
-public struct DialogueLine
-{
-    public string text;
-    public string speaker;
+    void ShowLine(DialogueLine dialogueLine)
+    {
+        SetText(dialogueLine.text);
+        speakerImage.sprite = speakers[(int)dialogueLine.speaker];
+    }
 }

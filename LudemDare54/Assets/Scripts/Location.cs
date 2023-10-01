@@ -9,6 +9,8 @@ public class Location : MonoBehaviour
     public bool isStartLocation = false;
     LocationDoor[] doors;
     public LocationDoor[] Doors => doors;
+    Character[] characters;
+    public Character[] Characters => characters;
 
     public bool IsValidWalkDestination(Vector3 destination)
     {
@@ -20,9 +22,14 @@ public class Location : MonoBehaviour
         walkable = GetComponentInChildren<Walkable>();
         gameObject.SetActive(isStartLocation);
         doors = GetComponentsInChildren<LocationDoor>();
+        characters = GetComponentsInChildren<Character>();
         if(isStartLocation)
         {
             gameObject.SetActive(true);
+        }
+        foreach(Character character in characters)
+        {
+            walkable.PlaceCharacter(character, character.transform.position);
         }
     }
 }

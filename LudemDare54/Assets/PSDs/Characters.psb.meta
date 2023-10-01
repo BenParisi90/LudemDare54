@@ -93,14 +93,14 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: nerds
+  - name: nerd
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
+      x: 436
       y: 4
       width: 242
       height: 622
@@ -113,8 +113,30 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 0, y: 1}
-    spritePosition: {x: 4, y: 3}
+    uvTransform: {x: 436, y: 4}
+    spritePosition: {x: 106, y: 3}
+  - name: neilDegrasseTyson
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 424
+      height: 844
+    spriteID: d4056203293ce824eb6264f08076f149
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 6, y: 0}
   characterData:
     bones: []
     parts: []
@@ -145,12 +167,22 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: nerds
-    spriteName: nerds
+  - name: nerd
+    spriteName: nerd
     isGroup: 0
     parentIndex: -1
     spriteID: 4c82ce73af9fd4a479cf04b93af59268
     layerID: 7
+    mosaicPosition: {x: 436, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: neilDegrasseTyson
+    spriteName: neilDegrasseTyson
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d4056203293ce824eb6264f08076f149
+    layerID: 8
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
