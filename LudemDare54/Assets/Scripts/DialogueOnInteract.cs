@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DialogueOnInteract : MonoBehaviour
 {
     [SerializeField]
-    Conversation conversation;
+    ConditionalConversation[] conversations;
 
     Interactable interactable;
     // Start is called before the first frame update
@@ -18,12 +18,34 @@ public class DialogueOnInteract : MonoBehaviour
 
     void Interact()
     {
-        if(TextController.instance.ShowingConversation == false)
+        if(TextController.instance.ShowingConversation)
         {
-            Debug.Log("Interacting with " + gameObject.name);
-            TextController.instance.SetConversation(conversation);
-
+            return;
         }
-        
+        foreach(ConditionalConversation conditionalConversation in conversations)
+        {
+            bool allConditionsMet = true;
+            foreach(GameEvent gameEvent in conditionalConversation.conditions)
+            {
+                if(!GameState.instance.GameEvents[(int)gameEvent])
+                {
+                    allConditionsMet = false;
+                    break;
+                }
+            }
+            if(allConditionsMet)
+            {
+                TextController.instance.SetConversation(conditionalConversation.conversation);
+                return;
+            }
+        }
+        Debug.Log("Interacting with " + gameObject.name);
     }
+}
+
+[System.Serializable]
+public struct ConditionalConversation
+{
+    public GameEvent[] conditions;
+    public Conversation conversation;
 }
