@@ -18,12 +18,6 @@ public class Highlightable : MonoBehaviour
         polygonCollider2D = GetComponent<PolygonCollider2D>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        SpriteShapeManager.instance.AssignSpriteShape(this);
-    }
-
     //if the mouse is over the walkable area, show the boot cursor
     void OnMouseEnter()
     {

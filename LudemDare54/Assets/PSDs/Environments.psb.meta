@@ -100,8 +100,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 4
-      y: 1092
+      x: 1932
+      y: 4
       width: 1915
       height: 1080
     spriteID: 23e7eac3c41a51741bc8a35ce6a83b19
@@ -113,7 +113,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 1092}
+    uvTransform: {x: 1932, y: 4}
     spritePosition: {x: 5, y: 0}
   - name: Bedroom
     originalName: 
@@ -136,6 +136,50 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  - name: Lab
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1092
+      width: 1920
+      height: 1080
+    spriteID: ff786a716ccea554788929ff7b13220d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 1092}
+    spritePosition: {x: 0, y: 0}
+  - name: FrontYard
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2180
+      width: 1920
+      height: 1080
+    spriteID: 973fd8b894f4aa1419a33a407bbd3d47
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 2180}
     spritePosition: {x: 0, y: 0}
   characterData:
     bones: []
@@ -173,7 +217,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 23e7eac3c41a51741bc8a35ce6a83b19
     layerID: 12
-    mosaicPosition: {x: 4, y: 1092}
+    mosaicPosition: {x: 1932, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -184,6 +228,26 @@ ScriptedImporter:
     spriteID: 6beb196dc020ec3409e4eca83ccc5d5c
     layerID: 10
     mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Lab
+    spriteName: Lab
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ff786a716ccea554788929ff7b13220d
+    layerID: 13
+    mosaicPosition: {x: 4, y: 1092}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: FrontYard
+    spriteName: FrontYard
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 973fd8b894f4aa1419a33a407bbd3d47
+    layerID: 14
+    mosaicPosition: {x: 4, y: 2180}
     flatten: 0
     isImported: 1
     isVisible: 1

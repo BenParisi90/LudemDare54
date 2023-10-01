@@ -49,6 +49,7 @@ public class LocationManager : MonoBehaviour
     public void SetCurrentLocation(Location location)
     {
         currentLocation = location;
+        location.Load();
         currentLocation.gameObject.SetActive(true);
         currentLocation.walkable.PlaceCharacter(PlayerController.instance.Character, PlayerController.instance.Character.transform.position);
     }

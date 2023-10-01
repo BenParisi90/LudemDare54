@@ -37,4 +37,12 @@ public class ObjectPool : MonoBehaviour
         Debug.LogWarning("No inactive objects found in pool");
         return null;
     }
+
+    public void ReturnAllObjects()
+    {
+        foreach (GameObject obj in pooledObjects)
+        {
+            obj.SetActive(false);
+        }
+    }
 }

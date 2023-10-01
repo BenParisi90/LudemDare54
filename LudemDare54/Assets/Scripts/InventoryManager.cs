@@ -58,6 +58,19 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
+
+    public bool HasItem(InvItem item)
+    {
+        //find the first slot with the item
+        for (int i = 0; i < invSlots.Length; i++)
+        {
+            if (invSlots[i].Item == item)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
 public enum InvItem

@@ -1,5 +1,6 @@
 public enum Role
 {
     NERD,
-    NEILDEGRASSETYSON,
+    NEIL_DEGRASSE_TYSON,
+    SAM_ALTMAN
 }

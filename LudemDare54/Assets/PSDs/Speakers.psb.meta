@@ -100,7 +100,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 524
+      x: 1564
       y: 4
       width: 435
       height: 499
@@ -113,8 +113,30 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 524, y: 4}
+    uvTransform: {x: 1564, y: 4}
     spritePosition: {x: 39, y: 0}
+  - name: SamAltman
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 510
+      y: 511
+      width: 512
+      height: 483
+    spriteID: 2d2875fc19de9504884f33e916d452b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 510, y: 511}
+    spritePosition: {x: 0, y: 0}
   - name: neilDegrasseTyson
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -136,6 +158,138 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  - name: KimKardashian
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1031
+      width: 475
+      height: 502
+    spriteID: ae2d6b20c9981764f948c365792d8cbd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 1031}
+    spritePosition: {x: 37, y: 0}
+  - name: Obama
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 4
+      width: 512
+      height: 495
+    spriteID: 6ff64564dcdabf24897fd082de5c0d36
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1044, y: 4}
+    spritePosition: {x: 0, y: 0}
+  - name: MarkZuckerberg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 511
+      width: 498
+      height: 512
+    spriteID: 48140255c0894fb419f38d0980a50cac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -10, y: 511}
+    spritePosition: {x: 14, y: 0}
+  - name: TaylorSwift
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1030
+      y: 511
+      width: 481
+      height: 512
+    spriteID: c40f63a2eec8dc3458122ce351b876c2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1025, y: 511}
+    spritePosition: {x: 5, y: 0}
+  - name: NikkiMinaj
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1519
+      y: 511
+      width: 512
+      height: 479
+    spriteID: 05b58daf51cdc6a42a0201a5e5aa22e5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1519, y: 511}
+    spritePosition: {x: 0, y: 0}
+  - name: Oprah
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 524
+      y: 4
+      width: 512
+      height: 497
+    spriteID: 0dba6aa77a2e7f14aa7cb0b109cde25e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 524, y: 4}
     spritePosition: {x: 0, y: 0}
   characterData:
     bones: []
@@ -173,7 +327,17 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: a9a6b79a6566c58428adca0ef02de5d4
     layerID: 3
-    mosaicPosition: {x: 524, y: 4}
+    mosaicPosition: {x: 1564, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: SamAltman
+    spriteName: SamAltman
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2d2875fc19de9504884f33e916d452b8
+    layerID: 5
+    mosaicPosition: {x: 510, y: 511}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -184,6 +348,66 @@ ScriptedImporter:
     spriteID: 45c172a17f41b9c4f881d7e10a724876
     layerID: 2
     mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: KimKardashian
+    spriteName: KimKardashian
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ae2d6b20c9981764f948c365792d8cbd
+    layerID: 6
+    mosaicPosition: {x: 4, y: 1031}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Obama
+    spriteName: Obama
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 6ff64564dcdabf24897fd082de5c0d36
+    layerID: 8
+    mosaicPosition: {x: 1044, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: MarkZuckerberg
+    spriteName: MarkZuckerberg
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 48140255c0894fb419f38d0980a50cac
+    layerID: 9
+    mosaicPosition: {x: 4, y: 511}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: TaylorSwift
+    spriteName: TaylorSwift
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c40f63a2eec8dc3458122ce351b876c2
+    layerID: 10
+    mosaicPosition: {x: 1030, y: 511}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: NikkiMinaj
+    spriteName: NikkiMinaj
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 05b58daf51cdc6a42a0201a5e5aa22e5
+    layerID: 11
+    mosaicPosition: {x: 1519, y: 511}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Oprah
+    spriteName: Oprah
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0dba6aa77a2e7f14aa7cb0b109cde25e
+    layerID: 12
+    mosaicPosition: {x: 524, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1

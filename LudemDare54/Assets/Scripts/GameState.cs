@@ -39,8 +39,8 @@ public class GameState : MonoBehaviour
 
 public enum GameEvent
 {
-    HAS_THE_SPOON,
     GAVE_NEIL_THE_SPOON,
     LOOKED_OUT_THE_WINDOW,
+    THREW_SPOON_OUT_WINDOW,
     Count
 }

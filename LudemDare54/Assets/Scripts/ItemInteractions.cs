@@ -19,15 +19,16 @@ public class ItemInteractions : MonoBehaviour
 
     void OnDraggedItemReleased(InvItem item)
     {
-        if(!interactable.InInteractableRange())
+        //if the mouse is overlapping the interactable
+        if (collider.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition)))
         {
-            interactable.AttemptInteraction();
-        }
-        else
-        {
-            //if the mouse is overlapping the interactable
-            if (collider.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition)))
+            if(!interactable.InInteractableRange())
             {
+                interactable.AttemptInteraction();
+            }
+            else
+            {
+        
                 for (int i = 0; i < interactions.Length; i++)
                 {
                     if (interactions[i].item == item)
@@ -36,13 +37,13 @@ public class ItemInteractions : MonoBehaviour
                         {
                             GameState.instance.GameEvents[(int)interactions[i].gameEvent] = true;
                         }
-                        if (interactions[i].removeItem)
-                        {
-                            InventoryManager.instance.RemoveItem(interactions[i].item);
-                        }
                         if (interactions[i].triggerInteraction)
                         {
                             interactable.Interact();
+                        }
+                        if (interactions[i].removeItem)
+                        {
+                            InventoryManager.instance.RemoveItem(interactions[i].item);
                         }
                     }
                 }

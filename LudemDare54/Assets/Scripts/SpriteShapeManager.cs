@@ -16,6 +16,11 @@ public class SpriteShapeManager : MonoBehaviour
         objectPool = GetComponent<ObjectPool>();
     }
 
+    public void ClearSpriteShapes()
+    {
+        objectPool.ReturnAllObjects();
+    }
+
     public void AssignSpriteShape(Highlightable highlightable)
     {
         GameObject spriteShape = objectPool.GetObject();

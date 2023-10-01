@@ -25,9 +25,17 @@ public class DialogueOnInteract : MonoBehaviour
         foreach(ConditionalConversation conditionalConversation in conversations)
         {
             bool allConditionsMet = true;
-            foreach(GameEvent gameEvent in conditionalConversation.conditions)
+            foreach(GameEvent gameEvent in conditionalConversation.gameConditions)
             {
                 if(!GameState.instance.GameEvents[(int)gameEvent])
+                {
+                    allConditionsMet = false;
+                    break;
+                }
+            }
+            foreach(InvItem invItem in conditionalConversation.inevntoryConditions)
+            {
+                if(!InventoryManager.instance.HasItem(invItem))
                 {
                     allConditionsMet = false;
                     break;
@@ -46,6 +54,7 @@ public class DialogueOnInteract : MonoBehaviour
 [System.Serializable]
 public struct ConditionalConversation
 {
-    public GameEvent[] conditions;
+    public GameEvent[] gameConditions;
+    public InvItem[] inevntoryConditions;
     public Conversation conversation;
 }
