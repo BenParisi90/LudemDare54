@@ -93,7 +93,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: EyeIcons
+  - name: comicBookBubbles
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -102,9 +102,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 239
-      height: 199
-    spriteID: ca3efabb157452b4c8632d7cf8904dad
+      width: 256
+      height: 183
+    spriteID: 9819b6b9aa5468746b0ff9a7dfc5c756
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -113,8 +113,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 10, y: 57}
+    uvTransform: {x: 4, y: -26}
+    spritePosition: {x: 0, y: 30}
   characterData:
     bones: []
     parts: []
@@ -145,6 +145,16 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: comicBookBubbles
+    spriteName: comicBookBubbles
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9819b6b9aa5468746b0ff9a7dfc5c756
+    layerID: 7
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Door
     spriteName: Door
     isGroup: 0
@@ -163,8 +173,8 @@ ScriptedImporter:
     layerID: 6
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
-    isImported: 1
-    isVisible: 1
+    isImported: 0
+    isVisible: 0
   - name: Boot
     spriteName: Boot
     isGroup: 0
