@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1668015491
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7265385675130581639, guid: 2dea1f9adf5e8704d91211256b320e87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -148,7 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7447676346518168343}
   - component: {fileID: 1637048288978958861}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Spoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1668015491
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -7056781075290000304, guid: 6ca49bda6105f1d4db0a548ad3785b03, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

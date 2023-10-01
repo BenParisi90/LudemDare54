@@ -37,6 +37,7 @@ public class InventorySlot : MonoBehaviour
             //start dragging the item
             isDragging = true;
             startPosition = activeItem.position;
+            InventoryManager.instance.DraggedItem = Item;
         }
     }
 
@@ -59,6 +60,8 @@ public class InventorySlot : MonoBehaviour
         }
         Debug.Log("Stop Drag");
         isDragging = false;
+        InventoryManager.instance.DraggedItem = InvItem.Count;
+        InventoryManager.instance.DraggedItemReleased?.Invoke(Item);
 
         // Check if the item was dropped in a valid location
         // If not, return the item to its original position

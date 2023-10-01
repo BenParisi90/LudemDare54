@@ -21,5 +21,6 @@ public class GameState : MonoBehaviour
 public enum GameEvent
 {
     HAS_THE_SPOON,
+    GAVE_NEIL_THE_SPOON,
     Count
 }

@@ -25,12 +25,17 @@ public class Interactable : MonoBehaviour
     //if I am clicked on, say hello
     void OnMouseDown()
     {
+        AttemptInteraction();
+    }
+
+    public void AttemptInteraction()
+    {
         if(TextController.instance.ShowingConversation)
         {
             return;
         }
         //if the player is farther than the interact dictance
-        if (Vector3.Distance(transform.position + interactionOffset, PlayerController.instance.Character.transform.position) > interactDistance)
+        if (!InInteractableRange())
         {
             Vector3 closestPoint = LocationManager.instance.CurrentLocation.walkable.ClosestPoint(transform.position + interactionOffset);
             PlayerController.instance.Character.Move(closestPoint, true);
@@ -41,6 +46,10 @@ public class Interactable : MonoBehaviour
             Debug.Log("Interact");
             Interact?.Invoke();
         }
-        
+    }
+
+    public bool InInteractableRange()
+    {
+        return Vector3.Distance(transform.position + interactionOffset, PlayerController.instance.Character.transform.position) <= interactDistance;
     }
 }
