@@ -9,6 +9,8 @@ public class GameCompleteScreen : MonoBehaviour
 {    
     public static GameCompleteScreen instance;
     [SerializeField]
+    TextMeshProUGUI endingText;
+    [SerializeField]
     TextMeshProUGUI gameCompleteText;
     [SerializeField]
     Color CompletedThisRunColor;
@@ -21,13 +23,30 @@ public class GameCompleteScreen : MonoBehaviour
     {
         instance = this;
         gameObject.SetActive(false);
+        
     }
 
-    public void ShowGameComplete()
+    void Start()
     {
-        gameObject.SetActive(true);
-        gameCompleteText.text = "You have completed the game!";
+        GameState.instance.ResetGameAction += ResetGame;
+    }
 
+    void ResetGame()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void ShowGameComplete(string finalText)
+    {
+        endingText.text = finalText;
+        gameObject.SetActive(true);
+        ShowStats();
+    }
+
+    public void ShowStats()
+    {
+        gameCompleteText.text = "";
+        int eventCount = 0;
         //for every game event
         for(int i = 0; i < (int)GameEvent.Count; i++)
         {
@@ -38,18 +57,29 @@ public class GameCompleteScreen : MonoBehaviour
                 gameCompleteText.text += "\n<color=#" + ColorUtility.ToHtmlStringRGB(CompletedThisRunColor) + ">" + ((GameEvent)i).ToString() + "</color>";
                 //save that you have completed the event in player prefs
                 PlayerPrefs.SetInt(((GameEvent)i).ToString(), 1);
+                eventCount++;
             }
             //otherwise, if i completed the even on a previous run
             else if(PlayerPrefs.GetInt(((GameEvent)i).ToString(), 0) == 1)
             {
                 //add the game event to the text with the completed previous run color
                 gameCompleteText.text += "\n<color=#" + ColorUtility.ToHtmlStringRGB(CompletedPreviousRunColor) + ">" + ((GameEvent)i).ToString() + "</color>";
+                eventCount++;
             }
             else
             {
                 //add the game event to the text with the not completed color
                 gameCompleteText.text += "\n<color=#" + ColorUtility.ToHtmlStringRGB(NotCompletedColor) + ">" + ((GameEvent)i).ToString() + "</color>";
             }
+        }
+        float percent = (float)eventCount / (float)GameEvent.Count;
+        if(percent == 1f)
+        {
+            gameCompleteText.text += "\n<color=#" + ColorUtility.ToHtmlStringRGB(CompletedThisRunColor) + ">100% Completed</color>";
+        }
+        else
+        {
+            gameCompleteText.text += "\n<color=#" + ColorUtility.ToHtmlStringRGB(NotCompletedColor) + ">" + Mathf.RoundToInt(percent * 100f) + "% Completed</color>";
         }
     }
 }

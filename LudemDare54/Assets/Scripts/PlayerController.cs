@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     Character character;
     public Character Character => character;
     public Interactable interactOnReachDestination;
+    public Vector3 startPosition;
 
     void Awake()
     {
@@ -15,6 +16,18 @@ public class PlayerController : MonoBehaviour
         character = GetComponent<Character>();
         character.ReachedDestination += OnReachedDestination;
         character.FailedToReachDestination += OnFailedToReachDestination;
+        startPosition = character.transform.position;
+        
+    }
+
+    void Start()
+    {
+        GameState.instance.ResetGameAction += ResetGame;
+    }
+
+    public void ResetGame()
+    {
+        character.transform.position = startPosition;
     }
 
     public void AttemptWalk()

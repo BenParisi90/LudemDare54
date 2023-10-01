@@ -11,9 +11,10 @@ public class LocationManager : MonoBehaviour
 
     Location[] locations;
 
-    void Start()
+    void Awake()
     {
         instance = this;
+        
         //turn on the game objects of all my children
         foreach(Transform child in transform)
         {
@@ -24,6 +25,19 @@ public class LocationManager : MonoBehaviour
         foreach (Location location in locations)
         {
             location.Init();
+        }
+    }
+
+    void Start()
+    {
+        ResetGame();
+        GameState.instance.ResetGameAction += ResetGame;
+    }
+
+    void ResetGame()
+    {
+        foreach (Location location in locations)
+        {
             location.gameObject.SetActive(location.isStartLocation);
             if(location.isStartLocation)
             {

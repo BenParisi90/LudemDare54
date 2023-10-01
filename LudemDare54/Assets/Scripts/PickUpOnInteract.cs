@@ -8,10 +8,21 @@ public class PickUpOnInteract : MonoBehaviour
     [SerializeField]
     InvItem item;
 
-    void Start()
+    void Awake()
     {
         interactable = GetComponent<Interactable>();
         interactable.Interact += Interact;
+        
+    }
+
+    void Start()
+    {
+        GameState.instance.ResetGameAction += ResetGame;
+    }
+
+    void ResetGame()
+    {
+        gameObject.SetActive(true);
     }
 
     void Interact()

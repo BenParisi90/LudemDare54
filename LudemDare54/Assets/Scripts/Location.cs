@@ -20,7 +20,6 @@ public class Location : MonoBehaviour
     public void Init()
     {
         walkable = GetComponentInChildren<Walkable>();
-        gameObject.SetActive(isStartLocation);
         doors = GetComponentsInChildren<LocationDoor>();
         characters = GetComponentsInChildren<Character>();
         foreach(Character character in characters)

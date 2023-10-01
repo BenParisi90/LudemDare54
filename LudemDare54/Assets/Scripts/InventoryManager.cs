@@ -17,6 +17,20 @@ public class InventoryManager : MonoBehaviour
     {
         instance = this;
         invSlots = GetComponentsInChildren<InventorySlot>();
+        
+    }
+
+    void Start()
+    {
+        GameState.instance.ResetGameAction += ResetGame;
+    }
+
+    void ResetGame()
+    {
+        foreach (InventorySlot slot in invSlots)
+        {
+            slot.AssignItem(InvItem.Count);
+        }
     }
 
     public void AddItem(InvItem item)

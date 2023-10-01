@@ -90,9 +90,9 @@ public class TextController : MonoBehaviour
                         showingConversation = false;
                         SetText("");
                         textBackground.gameObject.SetActive(false);
-                        if(currentConversation.isFinal)
+                        if(currentConversation.finalText != "")
                         {
-                            GameCompleteScreen.instance.ShowGameComplete();
+                            GameCompleteScreen.instance.ShowGameComplete(currentConversation.finalText);
                         }
                     }
                 }
