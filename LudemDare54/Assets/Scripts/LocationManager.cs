@@ -14,9 +14,16 @@ public class LocationManager : MonoBehaviour
     void Start()
     {
         instance = this;
+        //turn on the game objects of all my children
+        foreach(Transform child in transform)
+        {
+            child.gameObject.SetActive(true);
+        }
+
         locations = GetComponentsInChildren<Location>();
         foreach (Location location in locations)
         {
+            location.Init();
             location.gameObject.SetActive(location.isStartLocation);
             if(location.isStartLocation)
             {

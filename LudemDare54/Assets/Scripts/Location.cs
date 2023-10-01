@@ -17,16 +17,12 @@ public class Location : MonoBehaviour
         return walkable.IsWithinWalkableArea(destination);
     }
 
-    void Awake()
+    public void Init()
     {
         walkable = GetComponentInChildren<Walkable>();
         gameObject.SetActive(isStartLocation);
         doors = GetComponentsInChildren<LocationDoor>();
         characters = GetComponentsInChildren<Character>();
-        if(isStartLocation)
-        {
-            gameObject.SetActive(true);
-        }
         foreach(Character character in characters)
         {
             walkable.PlaceCharacter(character, character.transform.position);
