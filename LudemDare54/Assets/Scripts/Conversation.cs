@@ -6,6 +6,7 @@ using UnityEngine;
 public class Conversation : ScriptableObject
 {
     public DialogueLine[] lines;
+    public bool isFinal;
 }
 
 [System.Serializable]

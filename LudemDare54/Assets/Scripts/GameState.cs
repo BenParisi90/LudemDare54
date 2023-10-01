@@ -1,3 +1,4 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class GameState : MonoBehaviour
@@ -22,5 +23,6 @@ public enum GameEvent
 {
     HAS_THE_SPOON,
     GAVE_NEIL_THE_SPOON,
+    LOOKED_OUT_THE_WINDOW,
     Count
 }

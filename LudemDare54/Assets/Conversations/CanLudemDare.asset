@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4751d9d901500734ab588e0713950b0b, type: 3}
-  m_Name: NeilAsksAboutSpoon
+  m_Name: CanLudemDare
   m_EditorClassIdentifier: 
   lines:
-  - text: Have you seen my spoon?
+  - text: Ok, now that I have my spoon we can ludem dare!
     speaker: 1
-  isFinal: 0
+  - text: Gee! Thanks!
+    speaker: 0
+  isFinal: 1
