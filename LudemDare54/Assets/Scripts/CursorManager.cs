@@ -23,7 +23,7 @@ public class CursorManager : MonoBehaviour
         else
         {
             // Set the cursor texture and hotspot
-            Cursor.SetCursor(cursorTextures[(int)cursorType], new Vector2(), CursorMode.Auto);
+            Cursor.SetCursor(cursorTextures[(int)cursorType], new Vector2(32,32), CursorMode.Auto);
         }
     }
 }
