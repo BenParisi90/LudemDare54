@@ -17,10 +17,9 @@ public class PlayerController : MonoBehaviour
         character.FailedToReachDestination += OnFailedToReachDestination;
     }
 
-    //when I click the mouse, move the character to that location
-    void Update()
+    public void AttemptWalk()
     {
-        if (Input.GetMouseButtonDown(0) && !TextController.instance.ShowingConversation)
+        if (!TextController.instance.ShowingConversation)
         {
             Vector3 targetDestination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             targetDestination.z = transform.position.z;

@@ -17,6 +17,11 @@ public class Walkable : MonoBehaviour
 
     }
 
+    void OnMouseDown()
+    {
+        PlayerController.instance.AttemptWalk();
+    }
+
     public bool IsWithinWalkableArea(Vector3 destination)
     {
         //convert the destination to a Vector2
