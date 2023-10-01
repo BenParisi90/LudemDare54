@@ -7,11 +7,13 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
     Character character;
     public Character Character => character;
+    public Interactable interactOnReachDestination;
 
     void Awake()
     {
         instance = this;
         character = GetComponent<Character>();
+        character.ReachedDestination += OnReachedDestination;
     }
 
     //when I click the mouse, move the character to that location
@@ -24,5 +26,16 @@ public class PlayerController : MonoBehaviour
             character.Move(targetDestination);
             Debug.Log("Set movement destination");
         }
+    }
+
+    void OnReachedDestination()
+    {
+        if(interactOnReachDestination == null)
+        {
+            return;
+        }
+        Debug.Log("Reached destination");
+        interactOnReachDestination.Interact?.Invoke();
+        interactOnReachDestination = null;
     }
 }

@@ -29,12 +29,12 @@ public class LocationManager : MonoBehaviour
     {
         currentLocation = location;
         currentLocation.gameObject.SetActive(true);
+        currentLocation.walkable.PlaceCharacter(PlayerController.instance.Character, PlayerController.instance.Character.transform.position);
     }
 
     public void ChangeLocation(Location oldLocation, Location newLocation)
     {
         oldLocation.gameObject.SetActive(false);
-        SetCurrentLocation(newLocation);
         Debug.Log("change location and reset destination");
         //place the player at the door to the old location
         foreach(LocationDoor door in newLocation.Doors)
@@ -45,6 +45,7 @@ public class LocationManager : MonoBehaviour
                 break;
             }
         }
+        SetCurrentLocation(newLocation);
         PlayerController.instance.Character.ResetDestination();
     }
 }
