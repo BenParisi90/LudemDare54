@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
         instance = this;
         character = GetComponent<Character>();
         character.ReachedDestination += OnReachedDestination;
+        character.FailedToReachDestination += OnFailedToReachDestination;
     }
 
     //when I click the mouse, move the character to that location
@@ -36,6 +37,16 @@ public class PlayerController : MonoBehaviour
         }
         Debug.Log("Reached destination");
         interactOnReachDestination.Interact?.Invoke();
+        interactOnReachDestination = null;
+    }
+
+    void OnFailedToReachDestination()
+    {
+        if (interactOnReachDestination == null)
+        {
+            return;
+        }
+        Debug.Log("Failed to reach destination");
         interactOnReachDestination = null;
     }
 }
