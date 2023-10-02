@@ -24,4 +24,4 @@ MonoBehaviour:
   - text: I don't know Mark. That sounds like a pretty rough time to me.
     speaker: 0
   finalText: 
-  gameEvent: 8
+  gameEvents: 08000000

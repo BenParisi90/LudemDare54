@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4751d9d901500734ab588e0713950b0b, type: 3}
+  m_Name: TellSamAboutWhoopie
+  m_EditorClassIdentifier: 
+  lines:
+  - text: Sam, I just talked to Whoopie, and she seems pretty upset.
+    speaker: 0
+  - text: Oh no! I love Star Trek! What's bugging her?
+    speaker: 2
+  - text: Well, basically, she doesn't wanna be here. She doesn't approve of how
+      AI is being used.
+    speaker: 0
+  - text: Ah, well... that's why we need stronger government regulation of the space.
+    speaker: 2
+  - text: Honestly, that seems like a cop out. I think they don't understand it,
+      and you can't control it. How are you going to make this right?
+    speaker: 0
+  - text: Look kid, do you want super powerful tools for making your Luden Dare game
+      or not?
+    speaker: 2
+  - text: ...... fine.
+    speaker: 0
+  finalText: 
+  gameEvents: 0b000000

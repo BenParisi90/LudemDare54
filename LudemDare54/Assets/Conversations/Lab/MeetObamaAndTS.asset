@@ -34,4 +34,4 @@ MonoBehaviour:
   - text: Yeah, It hurts to walk like this.
     speaker: 6
   finalText: 
-  gameEvent: 8
+  gameEvents: 03000000

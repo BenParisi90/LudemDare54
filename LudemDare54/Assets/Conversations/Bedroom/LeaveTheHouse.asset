@@ -16,4 +16,4 @@ MonoBehaviour:
   - text: I'm outta here!
     speaker: 0
   finalText: You Left The House
-  gameEvent: 8
+  gameEvent: 13

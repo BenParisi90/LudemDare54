@@ -16,6 +16,13 @@ public class Character : MonoBehaviour
     }
     void Update()
     {
+        //if im in unity editor and pressed the s key, make the speed 50
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            speed = 50f;
+        }  
+#endif  
         if (Vector3.Distance(transform.position, destination) < 0.01f)
         {
             return;
@@ -41,7 +48,8 @@ public class Character : MonoBehaviour
             FailedToReachDestination?.Invoke();
             ResetDestination();
             Debug.Log("Failed to reach destination");
-        }      
+        }
+        
     }
 
     public void Move(Vector3 targetDestination, bool force = false)

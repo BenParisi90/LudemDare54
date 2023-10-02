@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     Character character;
     public Character Character => character;
     public Interactable interactOnReachDestination;
+    public ItemInteractions itemInteractionsOnReachDestination;
+    public InvItem itemToUseOnReachDestination;
     public Vector3 startPosition;
 
     void Awake()
@@ -43,13 +45,18 @@ public class PlayerController : MonoBehaviour
 
     void OnReachedDestination()
     {
-        if(interactOnReachDestination == null)
-        {
-            return;
-        }
         Debug.Log("Reached destination");
-        interactOnReachDestination.AttemptInteraction();
-        interactOnReachDestination = null;
+        if(interactOnReachDestination != null)
+        {
+            interactOnReachDestination.AttemptInteraction();
+            interactOnReachDestination = null;
+        }
+        if(itemInteractionsOnReachDestination != null)
+        {
+            itemInteractionsOnReachDestination.AttemptItemInteraction(itemToUseOnReachDestination);
+            interactOnReachDestination = null;
+            itemInteractionsOnReachDestination = null;
+        }
     }
 
     void OnFailedToReachDestination()

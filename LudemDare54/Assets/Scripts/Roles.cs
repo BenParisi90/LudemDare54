@@ -10,4 +10,5 @@ public enum Role
     NIKKI_MINAJ,
     OPRAH,
     ELON_MUSK,
+    WHOOPIE_GOLDBERG,
 }

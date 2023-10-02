@@ -17,5 +17,7 @@ MonoBehaviour:
     speaker: 0
   - text: Sweet! I better not forget to charge them each night!
     speaker: 6
+  - text: Those are some badass legs Taylor!
+    speaker: 4
   finalText: You Saved Taylor Swift!
-  gameEvent: 8
+  gameEvent: 13

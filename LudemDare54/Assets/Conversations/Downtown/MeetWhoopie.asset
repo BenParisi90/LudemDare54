@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4751d9d901500734ab588e0713950b0b, type: 3}
+  m_Name: MeetWhoopie
+  m_EditorClassIdentifier: 
+  lines:
+  - text: Oh cool. It's Whoopie Goldberg. I sure do love Star Trek The Next Generation!
+    speaker: 0
+  - text: What's up kid, how ya doin?
+    speaker: 10
+  - text: I'm great! How bout you?
+    speaker: 0
+  - text: Frankly Kid, I'm pretty upset.
+    speaker: 10
+  - text: Oh no. What's wrong? Can I help?
+    speaker: 0
+  - text: Well, I don't like my likeness being used without my permission.
+    speaker: 10
+  - text: Yeah, I can understand that. Honently, AI did a pretty bad job with you.
+      You don't even look that much like Whoopie.
+    speaker: 0
+  - text: Can you go talk to Sam Altman and get this sorted out?
+    speaker: 10
+  finalText: 
+  gameEvents: 0a000000

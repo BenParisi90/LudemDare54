@@ -25,28 +25,35 @@ public class ItemInteractions : MonoBehaviour
             if(!interactable.InInteractableRange())
             {
                 interactable.AttemptInteraction();
+                PlayerController.instance.interactOnReachDestination = null;
+                PlayerController.instance.itemInteractionsOnReachDestination = this;
+                PlayerController.instance.itemToUseOnReachDestination = item;
             }
             else
             {
-        
-                for (int i = 0; i < interactions.Length; i++)
+                AttemptItemInteraction(item);
+            }
+        }
+    }
+
+    public void AttemptItemInteraction(InvItem item)
+    {
+        for (int i = 0; i < interactions.Length; i++)
+        {
+            if (interactions[i].item == item)
+            {
+                if (interactions[i].gameEvent != GameEvent.Count)
                 {
-                    if (interactions[i].item == item)
-                    {
-                        if (interactions[i].gameEvent != GameEvent.Count)
-                        {
-                            Debug.Log("Setting " + interactions[i].gameEvent + " to true");
-                            GameState.instance.GameEvents[(int)interactions[i].gameEvent] = true;
-                        }
-                        if (interactions[i].triggerInteraction)
-                        {
-                            interactable.Interact();
-                        }
-                        if (interactions[i].removeItem)
-                        {
-                            InventoryManager.instance.RemoveItem(interactions[i].item);
-                        }
-                    }
+                    Debug.Log("Setting " + interactions[i].gameEvent + " to true");
+                    GameState.instance.GameEvents[(int)interactions[i].gameEvent] = true;
+                }
+                if (interactions[i].triggerInteraction)
+                {
+                    interactable.Interact();
+                }
+                if (interactions[i].removeItem)
+                {
+                    InventoryManager.instance.RemoveItem(interactions[i].item);
                 }
             }
         }

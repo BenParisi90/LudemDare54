@@ -100,8 +100,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1932
-      y: 1092
+      x: 4
+      y: 5444
       width: 1915
       height: 1080
     spriteID: 23e7eac3c41a51741bc8a35ce6a83b19
@@ -113,7 +113,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1932, y: 1092}
+    uvTransform: {x: 4, y: 5444}
     spritePosition: {x: 5, y: 0}
   - name: Bedroom
     originalName: 
@@ -188,8 +188,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1932
-      y: 4
+      x: 4
+      y: 4356
       width: 1918
       height: 1080
     spriteID: a5ac0980df91f2c48ac21f1ef0f32754
@@ -201,7 +201,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1932, y: 4}
+    uvTransform: {x: 4, y: 4356}
     spritePosition: {x: 0, y: 0}
   - name: Diner
     originalName: 
@@ -210,8 +210,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1932
-      y: 2180
+      x: 4
+      y: 6532
       width: 1915
       height: 1080
     spriteID: a100cb7b366c7d1458b99ba6260026a5
@@ -223,8 +223,30 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1932, y: 2180}
+    uvTransform: {x: 4, y: 6532}
     spritePosition: {x: 5, y: 0}
+  - name: Downtown
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3268
+      width: 1920
+      height: 1080
+    spriteID: 7dfd7d8a0587aa84399639bef8189bb6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 3268}
+    spritePosition: {x: 0, y: 0}
   characterData:
     bones: []
     parts: []
@@ -261,7 +283,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 23e7eac3c41a51741bc8a35ce6a83b19
     layerID: 12
-    mosaicPosition: {x: 1932, y: 1092}
+    mosaicPosition: {x: 4, y: 5444}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -301,7 +323,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: a5ac0980df91f2c48ac21f1ef0f32754
     layerID: 15
-    mosaicPosition: {x: 1932, y: 4}
+    mosaicPosition: {x: 4, y: 4356}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -311,7 +333,17 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: a100cb7b366c7d1458b99ba6260026a5
     layerID: 16
-    mosaicPosition: {x: 1932, y: 2180}
+    mosaicPosition: {x: 4, y: 6532}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Downtown
+    spriteName: Downtown
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7dfd7d8a0587aa84399639bef8189bb6
+    layerID: 17
+    mosaicPosition: {x: 4, y: 3268}
     flatten: 0
     isImported: 1
     isVisible: 1

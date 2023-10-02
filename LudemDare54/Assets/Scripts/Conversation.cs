@@ -7,7 +7,7 @@ public class Conversation : ScriptableObject
 {
     public DialogueLine[] lines;
     public string finalText;
-    public GameEvent gameEvent = GameEvent.Count;
+    public GameEvent[] gameEvents;
 }
 
 [System.Serializable]

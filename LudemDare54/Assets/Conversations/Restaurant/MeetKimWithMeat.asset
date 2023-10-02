@@ -33,4 +33,4 @@ MonoBehaviour:
   - text: Find me a spoon and I'll prove it.
     speaker: 3
   finalText: 
-  gameEvent: 8
+  gameEvent: 13

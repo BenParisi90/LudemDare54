@@ -90,9 +90,12 @@ public class TextController : MonoBehaviour
                         showingConversation = false;
                         SetText("");
                         textBackground.gameObject.SetActive(false);
-                        if(currentConversation.gameEvent != GameEvent.Count)
+                        foreach (GameEvent gameEvent in currentConversation.gameEvents)
                         {
-                            GameState.instance.GameEvents[(int)currentConversation.gameEvent] = true;
+                            if (gameEvent != GameEvent.Count)
+                            {
+                                GameState.instance.GameEvents[(int)gameEvent] = true;
+                            }
                         }
                         if(currentConversation.finalText != "")
                         {
