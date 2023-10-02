@@ -31,6 +31,10 @@ public class InventorySlot : MonoBehaviour
     //when you click on me, 
     void OnMouseDown()
     {
+        if(TextController.instance.ShowingConversation)
+        {
+            return;
+        }
         if (Item != InvItem.Count)
         {
             Debug.Log("Start Drag");
