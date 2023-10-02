@@ -203,6 +203,28 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 1932, y: 4}
     spritePosition: {x: 0, y: 0}
+  - name: Diner
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1932
+      y: 2180
+      width: 1915
+      height: 1080
+    spriteID: a100cb7b366c7d1458b99ba6260026a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1932, y: 2180}
+    spritePosition: {x: 5, y: 0}
   characterData:
     bones: []
     parts: []
@@ -280,6 +302,16 @@ ScriptedImporter:
     spriteID: a5ac0980df91f2c48ac21f1ef0f32754
     layerID: 15
     mosaicPosition: {x: 1932, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Diner
+    spriteName: Diner
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a100cb7b366c7d1458b99ba6260026a5
+    layerID: 16
+    mosaicPosition: {x: 1932, y: 2180}
     flatten: 0
     isImported: 1
     isVisible: 1

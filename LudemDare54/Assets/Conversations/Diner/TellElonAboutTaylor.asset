@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4751d9d901500734ab588e0713950b0b, type: 3}
+  m_Name: TellElonAboutTaylor
+  m_EditorClassIdentifier: 
+  lines:
+  - text: Elon, have you heard about Taylor Swift?
+    speaker: 0
+  - text: uuum... no.
+    speaker: 9
+  - text: Her feet are all jacked up beacuse of a generative fill gone wrong. She
+      needs new legs!
+    speaker: 0
+  - text: Oh, well if it's for taylor Swift, sure. These legs need a brand ambassador
+      like her!
+    speaker: 9
+  finalText: 
+  gameEvent: 6

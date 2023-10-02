@@ -15,4 +15,5 @@ MonoBehaviour:
   lines:
   - text: Have you seen my spoon?
     speaker: 1
-  isFinal: 0
+  finalText: 
+  gameEvent: 8

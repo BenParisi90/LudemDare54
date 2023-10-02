@@ -100,8 +100,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1659
-      y: 4
+      x: 1335
+      y: 1391
       width: 241
       height: 612
     spriteID: 4c82ce73af9fd4a479cf04b93af59268
@@ -113,7 +113,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1659, y: 4}
+    uvTransform: {x: 1335, y: 1391}
     spritePosition: {x: 106, y: 3}
   - name: SamAltman
     originalName: 
@@ -126,7 +126,7 @@ ScriptedImporter:
       y: 4
       width: 316
       height: 838
-    spriteID: d1c91a571f914a048adcab3f83b272bb
+    spriteID: 19f418303578d664e8ce6ee0b1ef7bb0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -166,8 +166,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1335
-      y: 850
+      x: 1659
+      y: 4
       width: 276
       height: 828
     spriteID: 24f4c56133400de478ff756f9f1fcd10
@@ -179,7 +179,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1335, y: 850}
+    uvTransform: {x: 1659, y: 4}
     spritePosition: {x: 110, y: 22}
   - name: Obama
     originalName: 
@@ -269,6 +269,28 @@ ScriptedImporter:
     parentGroupIndex: -1
     uvTransform: {x: 445, y: 4}
     spritePosition: {x: 5, y: 76}
+  - name: ElonMusk
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1335
+      y: 850
+      width: 432
+      height: 533
+    spriteID: b5ee1305b89080e48a8a83c926eb4c79
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1335, y: 850}
+    spritePosition: {x: 4, y: 4}
   - name: Oprah
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -327,7 +349,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 4c82ce73af9fd4a479cf04b93af59268
     layerID: 7
-    mosaicPosition: {x: 1659, y: 4}
+    mosaicPosition: {x: 1335, y: 1391}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -335,8 +357,8 @@ ScriptedImporter:
     spriteName: SamAltman
     isGroup: 0
     parentIndex: -1
-    spriteID: d1c91a571f914a048adcab3f83b272bb
-    layerID: 11
+    spriteID: 19f418303578d664e8ce6ee0b1ef7bb0
+    layerID: 29
     mosaicPosition: {x: 1335, y: 4}
     flatten: 0
     isImported: 1
@@ -357,7 +379,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 24f4c56133400de478ff756f9f1fcd10
     layerID: 12
-    mosaicPosition: {x: 1335, y: 850}
+    mosaicPosition: {x: 1659, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -398,6 +420,16 @@ ScriptedImporter:
     spriteID: e11a5ac50ee1ac5449419ea7288154bb
     layerID: 21
     mosaicPosition: {x: 445, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ElonMusk
+    spriteName: ElonMusk
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b5ee1305b89080e48a8a83c926eb4c79
+    layerID: 26
+    mosaicPosition: {x: 1335, y: 850}
     flatten: 0
     isImported: 1
     isVisible: 1

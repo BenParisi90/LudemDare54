@@ -122,7 +122,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 510
+      x: 1030
       y: 511
       width: 512
       height: 483
@@ -135,7 +135,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 510, y: 511}
+    uvTransform: {x: 1030, y: 511}
     spritePosition: {x: 0, y: 0}
   - name: neilDegrasseTyson
     originalName: 
@@ -167,7 +167,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 1031
+      y: 1518
       width: 475
       height: 502
     spriteID: ae2d6b20c9981764f948c365792d8cbd
@@ -179,7 +179,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 1031}
+    uvTransform: {x: 4, y: 1518}
     spritePosition: {x: 37, y: 0}
   - name: Obama
     originalName: 
@@ -188,8 +188,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1044
-      y: 4
+      x: 510
+      y: 511
       width: 512
       height: 495
     spriteID: 6ff64564dcdabf24897fd082de5c0d36
@@ -201,7 +201,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1044, y: 4}
+    uvTransform: {x: 510, y: 511}
     spritePosition: {x: 0, y: 0}
   - name: MarkZuckerberg
     originalName: 
@@ -232,7 +232,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1030
+      x: 1550
       y: 511
       width: 481
       height: 512
@@ -245,7 +245,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1025, y: 511}
+    uvTransform: {x: 1545, y: 511}
     spritePosition: {x: 5, y: 0}
   - name: NikkiMinaj
     originalName: 
@@ -254,8 +254,8 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 1519
-      y: 511
+      x: 4
+      y: 1031
       width: 512
       height: 479
     spriteID: 05b58daf51cdc6a42a0201a5e5aa22e5
@@ -267,7 +267,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 1519, y: 511}
+    uvTransform: {x: 4, y: 1031}
     spritePosition: {x: 0, y: 0}
   - name: Oprah
     originalName: 
@@ -290,6 +290,28 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 524, y: 4}
+    spritePosition: {x: 0, y: 0}
+  - name: ElonMusk
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1044
+      y: 4
+      width: 512
+      height: 497
+    spriteID: 51b25f1c1e34161498584c6472558637
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1044, y: 4}
     spritePosition: {x: 0, y: 0}
   characterData:
     bones: []
@@ -337,7 +359,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 2d2875fc19de9504884f33e916d452b8
     layerID: 5
-    mosaicPosition: {x: 510, y: 511}
+    mosaicPosition: {x: 1030, y: 511}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -357,7 +379,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: ae2d6b20c9981764f948c365792d8cbd
     layerID: 6
-    mosaicPosition: {x: 4, y: 1031}
+    mosaicPosition: {x: 4, y: 1518}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -367,7 +389,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 6ff64564dcdabf24897fd082de5c0d36
     layerID: 8
-    mosaicPosition: {x: 1044, y: 4}
+    mosaicPosition: {x: 510, y: 511}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -387,7 +409,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: c40f63a2eec8dc3458122ce351b876c2
     layerID: 10
-    mosaicPosition: {x: 1030, y: 511}
+    mosaicPosition: {x: 1550, y: 511}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -397,7 +419,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: 05b58daf51cdc6a42a0201a5e5aa22e5
     layerID: 11
-    mosaicPosition: {x: 1519, y: 511}
+    mosaicPosition: {x: 4, y: 1031}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -408,6 +430,16 @@ ScriptedImporter:
     spriteID: 0dba6aa77a2e7f14aa7cb0b109cde25e
     layerID: 12
     mosaicPosition: {x: 524, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ElonMusk
+    spriteName: ElonMusk
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 51b25f1c1e34161498584c6472558637
+    layerID: 15
+    mosaicPosition: {x: 1044, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1

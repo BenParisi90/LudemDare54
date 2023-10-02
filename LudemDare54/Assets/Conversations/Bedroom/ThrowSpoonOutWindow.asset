@@ -16,3 +16,4 @@ MonoBehaviour:
   - text: Huugh! *With a might heave, you throw the spoon from the window!
     speaker: 0
   finalText: 
+  gameEvent: 8

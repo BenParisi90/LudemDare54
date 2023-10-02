@@ -35,6 +35,7 @@ public class ItemInteractions : MonoBehaviour
                     {
                         if (interactions[i].gameEvent != GameEvent.Count)
                         {
+                            Debug.Log("Setting " + interactions[i].gameEvent + " to true");
                             GameState.instance.GameEvents[(int)interactions[i].gameEvent] = true;
                         }
                         if (interactions[i].triggerInteraction)

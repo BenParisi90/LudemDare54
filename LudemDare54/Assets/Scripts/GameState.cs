@@ -18,6 +18,18 @@ public class GameState : MonoBehaviour
         ResetGame();
     }
 
+    //if I pressed the d button, log out the game state
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.D))
+        {
+            for(int i = 0; i < (int)GameEvent.Count; i++)
+            {
+                Debug.Log((GameEvent)i + ": " + gameEvents[i]);
+            }
+        }
+    }
+
     public void ResetGame()
     {
         ResetGameAction?.Invoke();
@@ -44,5 +56,8 @@ public enum GameEvent
     THREW_SPOON_OUT_WINDOW,
     HAS_MET_OBAMA_AND_TAYLOR_SWIFT,
     GAVE_KIM_THE_SPOON,
+    SOLD_MARK_THE_MEAT,
+    TOLD_ELON_ABOUT_TAYLORS_LEGS,
+    GAVE_TAYLOR_SWIFT_THE_ROBOT_LEGS,
     Count
 }

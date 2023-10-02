@@ -8,5 +8,6 @@ public enum Role
     MARK_ZUCKERBERG,
     TAYLOR_SWIFT,
     NIKKI_MINAJ,
-    OPRAH
+    OPRAH,
+    ELON_MUSK,
 }

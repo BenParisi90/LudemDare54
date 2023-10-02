@@ -15,7 +15,9 @@ public class Interactable : MonoBehaviour
     Vector3 interactionOffset;
 
     [SerializeField]
-    BlockingCondition[] blockingConditions;
+    BlockingItemCondition[] blockingConditions;
+    [SerializeField]
+    BlockingGameEventCondition[] blockingGameEventConditions;
 
 #if UNITY_EDITOR
     private void OnDrawGizmosSelected()
@@ -47,11 +49,19 @@ public class Interactable : MonoBehaviour
         }
         else
         {
-            foreach (BlockingCondition blockingCondition in blockingConditions)
+            foreach (BlockingItemCondition blockingCondition in blockingConditions)
             {
                 if (InventoryManager.instance.HasItem(blockingCondition.invItem) == blockingCondition.hasItem)
                 {
                     TextController.instance.SetConversation(blockingCondition.conversation);
+                    return;
+                }
+            }
+            foreach (BlockingGameEventCondition blockingGameEventCondition in blockingGameEventConditions)
+            {
+                if (GameState.instance.GameEvents[(int)blockingGameEventCondition.gameEvent] == blockingGameEventCondition.eventComplete)
+                {
+                    TextController.instance.SetConversation(blockingGameEventCondition.conversation);
                     return;
                 }
             }
@@ -69,9 +79,17 @@ public class Interactable : MonoBehaviour
 }
 
 [System.Serializable]
-public struct BlockingCondition
+public struct BlockingItemCondition
 {
     public InvItem invItem;
     public bool hasItem;
+    public Conversation conversation;
+}
+
+[System.Serializable]
+public struct BlockingGameEventCondition
+{
+    public GameEvent gameEvent;
+    public bool eventComplete;
     public Conversation conversation;
 }

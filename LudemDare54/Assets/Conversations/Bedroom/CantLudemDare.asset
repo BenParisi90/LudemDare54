@@ -17,4 +17,5 @@ MonoBehaviour:
     speaker: 0
   - text: Hey kid! You can't do that till you find my spoon!
     speaker: 1
-  isFinal: 0
+  finalText: 
+  gameEvent: 8

@@ -17,3 +17,5 @@ MonoBehaviour:
     speaker: 1
   - text: Whatever dude...
     speaker: 0
+  finalText: 
+  gameEvent: 8

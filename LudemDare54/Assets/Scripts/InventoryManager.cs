@@ -77,5 +77,6 @@ public enum InvItem
 {
     SPOON,
     SMOKED_MEATS,
+    ROBOT_LEGS,
     Count
 }

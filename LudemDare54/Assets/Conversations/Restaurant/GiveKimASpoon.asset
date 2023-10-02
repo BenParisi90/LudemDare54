@@ -22,3 +22,4 @@ MonoBehaviour:
   - text: Nice! You're the best!
     speaker: 3
   finalText: Made Friends With Kim Kardashian!
+  gameEvent: 8

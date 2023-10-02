@@ -18,3 +18,4 @@ MonoBehaviour:
   - text: Gee! Thanks!
     speaker: 0
   finalText: You Won Ludem Dare!
+  gameEvent: 8

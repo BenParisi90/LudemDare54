@@ -17,3 +17,5 @@ MonoBehaviour:
     speaker: 1
   - text: For sure dude, calm down.
     speaker: 0
+  finalText: 
+  gameEvent: 8

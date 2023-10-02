@@ -17,4 +17,5 @@ MonoBehaviour:
     speaker: 0
   - text: I wonder adventures what today will bring.
     speaker: 0
-  isFinal: 0
+  finalText: 
+  gameEvent: 8

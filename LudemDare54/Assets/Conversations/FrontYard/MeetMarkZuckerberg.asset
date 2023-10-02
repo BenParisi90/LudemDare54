@@ -18,3 +18,4 @@ MonoBehaviour:
   - text: What's up dude?
     speaker: 5
   finalText: 
+  gameEvent: 8

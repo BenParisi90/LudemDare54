@@ -24,3 +24,4 @@ MonoBehaviour:
   - text: oh...
     speaker: 0
   finalText: 
+  gameEvent: 8
