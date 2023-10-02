@@ -15,7 +15,9 @@ MonoBehaviour:
   lines:
   - text: Hey! That's my spoon! Give it here!
     speaker: 1
+    audioClip: {fileID: 8300000, guid: 2b42d71d1d2436c47872e42d9e203132, type: 3}
   - text: For sure dude, calm down.
     speaker: 0
+    audioClip: {fileID: 0}
   finalText: 
-  gameEvent: 13
+  gameEvents: 

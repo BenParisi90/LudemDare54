@@ -25,4 +25,4 @@ MonoBehaviour:
   - text: Brutal...
     speaker: 0
   finalText: It's Hopeless!
-  gameEvent: 12
+  gameEvents: 0c000000

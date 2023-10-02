@@ -15,7 +15,9 @@ MonoBehaviour:
   lines:
   - text: Oh boy! Let's ludem dare!
     speaker: 0
+    audioClip: {fileID: 0}
   - text: Hey kid! You can't do that till you find my spoon!
     speaker: 1
+    audioClip: {fileID: 8300000, guid: f42fb73410405c74c93e27025d7d4d11, type: 3}
   finalText: 
-  gameEvent: 13
+  gameEvents: 

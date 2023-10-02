@@ -15,5 +15,6 @@ MonoBehaviour:
   lines:
   - text: Have you seen my spoon?
     speaker: 1
+    audioClip: {fileID: 8300000, guid: 28121cce04fd59845aa1553fdb08af67, type: 3}
   finalText: 
-  gameEvent: 13
+  gameEvents: 

@@ -115,5 +115,9 @@ public class TextController : MonoBehaviour
     {
         SetText(dialogueLine.text);
         speakerImage.sprite = speakers[(int)dialogueLine.speaker];
+        if(dialogueLine.audioClip != null)
+        {
+            AudioManager.instance.PlaySound(dialogueLine.audioClip);
+        }
     }
 }
