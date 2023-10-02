@@ -11,7 +11,11 @@ public class Interactable : MonoBehaviour
     public float interactDistance = 1f;
     public Action Interact;
 
-    [SerializeField] Vector3 interactionOffset;
+    [SerializeField] 
+    Vector3 interactionOffset;
+
+    [SerializeField]
+    BlockingCondition[] blockingConditions;
 
 #if UNITY_EDITOR
     private void OnDrawGizmosSelected()
@@ -43,6 +47,16 @@ public class Interactable : MonoBehaviour
         }
         else
         {
+            foreach (BlockingCondition blockingCondition in blockingConditions)
+            {
+                if (InventoryManager.instance.HasItem(blockingCondition.invItem) == blockingCondition.hasItem)
+                {
+                    TextController.instance.SetConversation(blockingCondition.conversation);
+                    return;
+                }
+            }
+            
+                
             Debug.Log("Interact");
             Interact?.Invoke();
         }
@@ -52,4 +66,12 @@ public class Interactable : MonoBehaviour
     {
         return Vector3.Distance(transform.position + interactionOffset, PlayerController.instance.Character.transform.position) <= interactDistance;
     }
+}
+
+[System.Serializable]
+public struct BlockingCondition
+{
+    public InvItem invItem;
+    public bool hasItem;
+    public Conversation conversation;
 }

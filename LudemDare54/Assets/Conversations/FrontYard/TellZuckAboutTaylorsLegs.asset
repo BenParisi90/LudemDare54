@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4751d9d901500734ab588e0713950b0b, type: 3}
+  m_Name: TellZuckAboutTaylorsLegs
+  m_EditorClassIdentifier: 
+  lines:
+  - text: Mark, have you seen Taylor Swift? Her legs are really messed up!
+    speaker: 0
+  - text: Bro, I might not be the person to ask about making legs....
+    speaker: 5
+  - text: Ah, right.
+    speaker: 0
+  - text: What if she just, like, didn't have them at all.
+    speaker: 5
+  - text: I don't know Mark. That sounds like a pretty rough time to me.
+    speaker: 0
+  finalText: 

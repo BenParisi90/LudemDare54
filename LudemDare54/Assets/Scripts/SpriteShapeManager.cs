@@ -34,6 +34,7 @@ public class SpriteShapeManager : MonoBehaviour
 
         // Get the Spline component
         Spline spline = spriteShapeController.spline;
+        spline.Clear();
         //set the points of hte spline to match the walkable area
         Vector2[] points = polygonCollider2D.points;
         //set the number of points in the spline to match the number of points in the walkable area

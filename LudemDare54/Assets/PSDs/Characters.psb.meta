@@ -234,9 +234,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 0
-      height: 0
-    spriteID: 04d76c04c94b1b94589b90832158c4fa
+      width: 433
+      height: 843
+    spriteID: 54b060abc378e004595cda392dc49925
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -246,7 +246,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 6, y: 0}
+    spritePosition: {x: 6, y: 7}
   - name: NikkiMinaj
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -385,8 +385,8 @@ ScriptedImporter:
     spriteName: TaylorSwift
     isGroup: 0
     parentIndex: -1
-    spriteID: 04d76c04c94b1b94589b90832158c4fa
-    layerID: 17
+    spriteID: 54b060abc378e004595cda392dc49925
+    layerID: 23
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1

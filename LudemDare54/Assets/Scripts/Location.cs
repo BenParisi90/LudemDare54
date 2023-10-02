@@ -13,6 +13,8 @@ public class Location : MonoBehaviour
     public Character[] Characters => characters;
     Highlightable[] highlightables;
     public Highlightable[] Highlightables => highlightables;
+    [SerializeField]
+    ConditionalItem[] conditionalItems;
 
     public bool IsValidWalkDestination(Vector3 destination)
     {
@@ -42,5 +44,16 @@ public class Location : MonoBehaviour
         {
             SpriteShapeManager.instance.AssignSpriteShape(highlightable);
         }
+        foreach(ConditionalItem conditionalItem in conditionalItems)
+        {
+            conditionalItem.item.SetActive(GameState.instance.GameEvents[(int)conditionalItem.gameEvent]);
+        }
     }
+}
+
+[System.Serializable]
+public struct ConditionalItem
+{
+    public GameObject item;
+    public GameEvent gameEvent;
 }

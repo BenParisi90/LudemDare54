@@ -41,8 +41,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Items
+    uniqueID: 520386647
+    locked: 0
   - name: People
     uniqueID: 2891907351
+    locked: 0
+  - name: SpriteShapes
+    uniqueID: 1172124775
     locked: 0
   - name: UI
     uniqueID: 1668015491

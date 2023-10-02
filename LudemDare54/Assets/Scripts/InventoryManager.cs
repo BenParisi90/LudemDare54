@@ -76,5 +76,6 @@ public class InventoryManager : MonoBehaviour
 public enum InvItem
 {
     SPOON,
+    SMOKED_MEATS,
     Count
 }

@@ -93,7 +93,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Spoon
+  - name: SmokedMeats
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -101,6 +101,28 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
+      y: 4
+      width: 840
+      height: 762
+    spriteID: 29d2f312753c9074fa1eaf788ced4405
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 27, y: 69}
+  - name: Spoon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 852
       y: 4
       width: 36
       height: 104
@@ -113,7 +135,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 852, y: 4}
     spritePosition: {x: 3, y: 920}
   characterData:
     bones: []
@@ -145,13 +167,23 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: SmokedMeats
+    spriteName: SmokedMeats
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 29d2f312753c9074fa1eaf788ced4405
+    layerID: 4
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Spoon
     spriteName: Spoon
     isGroup: 0
     parentIndex: -1
     spriteID: 7730acd7197c9484988425677f1e2eb2
     layerID: 2
-    mosaicPosition: {x: 4, y: 4}
+    mosaicPosition: {x: 852, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1

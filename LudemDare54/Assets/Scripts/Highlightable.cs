@@ -15,7 +15,7 @@ public class Highlightable : MonoBehaviour
 
     void Awake()
     {
-        polygonCollider2D = GetComponent<PolygonCollider2D>();
+        polygonCollider2D = GetComponentInChildren<PolygonCollider2D>();
     }
 
     //if the mouse is over the walkable area, show the boot cursor

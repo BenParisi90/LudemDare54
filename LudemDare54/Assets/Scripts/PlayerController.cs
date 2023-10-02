@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
         Debug.Log("Reached destination");
-        interactOnReachDestination.Interact?.Invoke();
+        interactOnReachDestination.AttemptInteraction();
         interactOnReachDestination = null;
     }
 

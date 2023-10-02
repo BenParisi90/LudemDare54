@@ -2,5 +2,11 @@ public enum Role
 {
     NERD,
     NEIL_DEGRASSE_TYSON,
-    SAM_ALTMAN
+    SAM_ALTMAN,
+    KIM_KARDASHIAN,
+    OBAMA,
+    MARK_ZUCKERBERG,
+    TAYLOR_SWIFT,
+    NIKKI_MINAJ,
+    OPRAH
 }
