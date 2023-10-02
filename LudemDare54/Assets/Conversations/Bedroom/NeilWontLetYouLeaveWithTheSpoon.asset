@@ -16,7 +16,7 @@ MonoBehaviour:
   - text: Hey kid, I see that you have my spoon. I can't just let you leave with
       it.
     speaker: 1
-    audioClip: {fileID: 8300000, guid: 0ccf466ec550f61498ddd3df9830de04, type: 3}
+    audioClip: {fileID: 0}
   - text: ...
     speaker: 0
     audioClip: {fileID: 0}

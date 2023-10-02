@@ -16,8 +16,11 @@ MonoBehaviour:
   - text: Thanks man, I was really worried about that spoon.
     speaker: 1
     audioClip: {fileID: 8300000, guid: 110317a33b3205a45860e10afb658c81, type: 3}
-  - text: Whatever dude...
+  - text: Hey! You said you would stop doing that!
     speaker: 0
+    audioClip: {fileID: 0}
+  - text: Right. Sorry. My Bad.
+    speaker: 1
     audioClip: {fileID: 0}
   finalText: 
   gameEvents: 

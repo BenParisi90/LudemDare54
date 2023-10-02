@@ -16,5 +16,17 @@ MonoBehaviour:
   - text: Have you seen my spoon?
     speaker: 1
     audioClip: {fileID: 8300000, guid: 28121cce04fd59845aa1553fdb08af67, type: 3}
+  - text: Holy crap Neil, our voices sound awful.
+    speaker: 0
+    audioClip: {fileID: 8300000, guid: 71699cf4607f0be4190b77932500a2e4, type: 3}
+  - text: Yeah, high quality voice generation is pretty expensive.
+    speaker: 1
+    audioClip: {fileID: 8300000, guid: 81353e6eaa463f7498e08bf472ff5753, type: 3}
+  - text: Let's agree to just do this with text from now on.
+    speaker: 0
+    audioClip: {fileID: 8300000, guid: fb073990b1946f843a7408a7410e29b5, type: 3}
+  - text: Sounds good kid.
+    speaker: 1
+    audioClip: {fileID: 8300000, guid: 0a249769f8461dc41889714496d06c30, type: 3}
   finalText: 
   gameEvents: 

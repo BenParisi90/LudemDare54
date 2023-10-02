@@ -15,7 +15,7 @@ MonoBehaviour:
   lines:
   - text: Ok, now that I have my spoon we can ludem dare!
     speaker: 1
-    audioClip: {fileID: 8300000, guid: ac16b7fe7b438704c8305ae6d19269ca, type: 3}
+    audioClip: {fileID: 0}
   - text: Gee! Thanks!
     speaker: 0
     audioClip: {fileID: 0}
