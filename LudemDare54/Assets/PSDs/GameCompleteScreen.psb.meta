@@ -93,7 +93,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Layer 0
+  - name: GameCompleteScreen
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -145,8 +145,8 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
-  - name: Layer 0
-    spriteName: Layer 0
+  - name: GameCompleteScreen
+    spriteName: GameCompleteScreen
     isGroup: 0
     parentIndex: -1
     spriteID: ab9534069aa8c1f4c9562f0683db0d4f

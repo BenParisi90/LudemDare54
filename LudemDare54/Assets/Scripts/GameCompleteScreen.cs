@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -50,7 +49,7 @@ public class GameCompleteScreen : MonoBehaviour
 
     public void ShowStats()
     {
-        gameCompleteText.text = "";
+        gameCompleteText.text = "To Do:\n";
         int eventCount = 0;
         //for every game event
         for(int i = 0; i < (int)GameEvent.Count; i++)
@@ -60,7 +59,7 @@ public class GameCompleteScreen : MonoBehaviour
             if(GameState.instance.GameEvents[i])
             {
                 //add the game event to the text with the completed color
-                gameCompleteText.text += "\n<color=#" + ColorUtility.ToHtmlStringRGB(CompletedThisRunColor) + ">" + eventDescription + "</color>";
+                gameCompleteText.text += "<color=#" + ColorUtility.ToHtmlStringRGB(CompletedThisRunColor) + ">" + eventDescription + "</color>\n";
                 //save that you have completed the event in player prefs
                 PlayerPrefs.SetInt(((GameEvent)i).ToString(), 1);
                 eventCount++;
@@ -69,23 +68,23 @@ public class GameCompleteScreen : MonoBehaviour
             else if(PlayerPrefs.GetInt(((GameEvent)i).ToString(), 0) == 1)
             {
                 //add the game event to the text with the completed previous run color
-                gameCompleteText.text += "\n<color=#" + ColorUtility.ToHtmlStringRGB(CompletedPreviousRunColor) + ">" + eventDescription + "</color>";
+                gameCompleteText.text += "<color=#" + ColorUtility.ToHtmlStringRGB(CompletedPreviousRunColor) + ">" + eventDescription + "</color>\n";
                 eventCount++;
             }
             else
             {
                 //add the game event to the text with the not completed color
-                gameCompleteText.text += "\n<color=#" + ColorUtility.ToHtmlStringRGB(NotCompletedColor) + ">" + eventDescription + "</color>";
+                gameCompleteText.text += "<color=#" + ColorUtility.ToHtmlStringRGB(NotCompletedColor) + ">" + eventDescription + "</color>\n";
             }
         }
         float percent = (float)eventCount / (float)GameEvent.Count;
         if(percent == 1f)
         {
-            gameCompleteText.text += "\n<color=#" + ColorUtility.ToHtmlStringRGB(CompletedThisRunColor) + ">100% Completed</color>";
+            gameCompleteText.text += "<color=#" + ColorUtility.ToHtmlStringRGB(CompletedThisRunColor) + ">100% Completed</color>\n";
         }
         else
         {
-            gameCompleteText.text += "\n<color=#" + ColorUtility.ToHtmlStringRGB(NotCompletedColor) + ">" + Mathf.RoundToInt(percent * 100f) + "% Completed</color>";
+            gameCompleteText.text += "<color=#" + ColorUtility.ToHtmlStringRGB(NotCompletedColor) + ">--" + Mathf.RoundToInt(percent * 100f) + "% Completed. Retry to complete more.--</color>\n";
         }
     }
 }

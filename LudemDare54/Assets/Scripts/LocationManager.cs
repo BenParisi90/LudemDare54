@@ -63,7 +63,7 @@ public class LocationManager : MonoBehaviour
         {
             if(door.DestinationLocation == oldLocation)
             {
-                PlayerController.instance.transform.position = door.transform.position;
+                PlayerController.instance.transform.position = door.transform.position + door.Interactable.InteractionOffset;
                 break;
             }
         }

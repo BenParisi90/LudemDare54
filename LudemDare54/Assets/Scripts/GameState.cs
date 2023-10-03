@@ -1,5 +1,4 @@
 using System;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class GameState : MonoBehaviour
@@ -64,5 +63,6 @@ public enum GameEvent
     HAS_MET_WHOOPIE_GOLDBERG,
     TOLD_SAM_ABOUT_WHOOPIE,
     TOLD_WHOOPIE_ITS_HOPELESS,
+    WON_LUDEM_DARE,
     Count
 }

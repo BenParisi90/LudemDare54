@@ -19,5 +19,11 @@ MonoBehaviour:
   - text: Gee! Thanks!
     speaker: 0
     audioClip: {fileID: 0}
+  - text: Remember kid, this isn't just about Ludem Dare!
+    speaker: 1
+    audioClip: {fileID: 0}
+  - text: To 100% this game, you need to head out that door and explore!
+    speaker: 1
+    audioClip: {fileID: 0}
   finalText: You Won Ludem Dare!
-  gameEvents: 
+  gameEvents: 0d000000

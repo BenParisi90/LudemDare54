@@ -5,6 +5,7 @@ using UnityEngine;
 public class LocationDoor : MonoBehaviour
 {
     Interactable interactable;
+    public Interactable Interactable => interactable;
 
     [SerializeField]
     Location destinationLocation;

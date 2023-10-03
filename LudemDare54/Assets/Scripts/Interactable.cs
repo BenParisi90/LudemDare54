@@ -13,6 +13,7 @@ public class Interactable : MonoBehaviour
 
     [SerializeField] 
     Vector3 interactionOffset;
+    public Vector3 InteractionOffset => interactionOffset;
 
     [SerializeField]
     BlockingItemCondition[] blockingConditions;
